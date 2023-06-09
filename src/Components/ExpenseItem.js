@@ -2,12 +2,15 @@ import './ExpenseItem.css'; // import the css file to be used in this component
 //then import the class name using className in the div tag and add the
 //class name to the css file and add the style you want to the class name
 function ExpenseItem (){
+    const expenseDate = new Date(2021, 2, 28);
+    const expenseTitle = 'Car Insurance';
+    const expenseAmount = 294.67;
     return (
         <div className={"expense-item"}>
-            <div>March 28th 2021</div>
+            <div>{expenseDate.toISOString()}</div>
     <div className={"expense-item__description"}>
-        <h2>Car Insurance</h2>
-        <div className={"expense-item__price"}>$294.67</div>
+        <h2>{expenseTitle}</h2>
+        <div className={"expense-item__price"}>{expenseAmount}</div>
     </div>
 
     </div>
