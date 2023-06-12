@@ -6,7 +6,7 @@ function Expense (prop){
 
     return (
         <div className={"expense-date"}>
-            <div>{month}</div>
+            <div className={"expense-date__month"}>{month}</div>
             <div>{year}</div>
             <div>{day}</div>
 
