@@ -1,13 +1,16 @@
-import './ExpenseItem.css'; // import the css file to be used in this component
-//then import the class name using className in the div tag and add the
-//class name to the css file and add the style you want to the class name
-function ExpenseItem (prop) // React will ensure that we get one parameter for each component
-//it will be an object and it will contain all the data that we pass to the component and you can name
-//whatever you want -> so you say prop then whatever you name your thing you put the same and it will give the data
-{  // so we named our thing amount -> so we acess the prop object and then the amount property and it will give us the data
+import './ExpenseItem.css';
+function ExpenseItem (prop) {
+    const month = prop.date.toLocaleString('en-US', { month: 'long' });
+    const day = prop.date.toLocaleString('en-US', { day: '2-digit' });
+    const year = prop.date.getFullYear();
     return (
         <div className={"expense-item"}>
-            <div>{prop.date.toISOString()}</div>
+            <div>
+                <div>{month}</div>
+                <div>{year}</div>
+                <div>{day}</div>
+
+            </div>
     <div className={"expense-item__description"}>
         <h2>{prop.title}</h2>
         <div className={"expense-item__price"}>{prop.amount}</div>
