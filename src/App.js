@@ -1,4 +1,5 @@
-import ExpenseItem  from "./Components/ExpenseItem";
+
+import Expenses from "./Components/Expenses";
 //Remember the simple rule is anythat that start with a lower case letter is a
 // built in  html component when it uppercase it is a custom so alwasy start with uppercase
 function App() {
@@ -26,18 +27,7 @@ function App() {
   return ( //so here you can see naming the title in expenses object as title so when we use it again we need to use the same name
    <div>
         <h1>Lets' get Started</h1>
-         <ExpenseItem title = {expenses[0].title}
-                      amount = {expenses[0].title}
-                      date = {expenses[0].date}></ExpenseItem>
-       <ExpenseItem title = {expenses[1].title}
-                           amount = {expenses[1].title}
-                           date = {expenses[1].date}></ExpenseItem>
-       <ExpenseItem  title = {expenses[2].title}
-                     amount = {expenses[2].title}
-                     date = {expenses[2].date}></ExpenseItem>
-       <ExpenseItem  title = {expenses[3].title}
-                     amount = {expenses[3].title}
-                     date = {expenses[3].date}></ExpenseItem>
+      <Expenses items={expenses}/>
    </div>
   );
 }
