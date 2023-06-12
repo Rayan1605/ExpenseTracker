@@ -1,8 +1,10 @@
 .expense-date {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* This is where it vertical but take up the whole page*/
     width: 5.5rem;
-    height: 5.5rem;
+    height: 5.5rem;/*m" in CSS stands for "root em" and represents a unit of
+    measurement relative to the font size of the root element, allowing for scalable and
+    consistent proportions in a document's design. */
     border: 1px solid #ececec;
     background-color: #2a2a2a;
     color: white;
