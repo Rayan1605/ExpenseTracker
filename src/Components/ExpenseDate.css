@@ -1,6 +1,8 @@
 .expense-date {
     display: flex;
-    flex-direction: column; /* This is where it vertical but take up the whole page*/
+    flex-direction: column; /*  allowing them to stack vertically instead of horizontally.
+    It enables the creation of multi-column layouts where items flow vertically, o
+    ne below the other, within a container.*/
     width: 5.5rem;
     height: 5.5rem;/*m" in CSS stands for "root em" and represents a unit of
     measurement relative to the font size of the root element, allowing for scalable and
