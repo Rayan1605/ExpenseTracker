@@ -7,6 +7,9 @@ function ExpenseItem(props) {
         console.log('Clicked!!!');
     }
 
+    //To add an event listener to a component, you need to add the event listener to the
+    // component like you would in html with the onClick attribute. Then write the function
+    //YOU can also use an anonymous function like this onClick={() => {console.log('Clicked!!!');}}
 
     return (
         <Card className='expense-item'>
