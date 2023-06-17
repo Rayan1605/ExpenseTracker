@@ -7,9 +7,10 @@ import React,{useState} from 'react';// you need to import useState from react t
 function ExpenseItem(props) {
   const [title,setTitle] = useState(props.title);// You want to send the original value and also it return
     // an array with two elements the first element is the original value and the second element is the
-    // function that allows you to update the value
+    // function that allows you to update the value and you can name it whatever you want
     function clickHandler() {
-
+  setTitle("Updated!"); // so we call the function and pass in the new value and it will update the
+        // value
     }
 
     return (
