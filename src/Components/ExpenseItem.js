@@ -5,7 +5,7 @@ import React,{useState} from 'react';// you need to import useState from react t
 //if you want to update the webpage you need to use the useState hook
 
 function ExpenseItem(props) {
-
+  useState(props.title);// You want to send the original value
     let title = props.title;
     function clickHandler() {
        title = 'Updated';
