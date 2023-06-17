@@ -1,5 +1,5 @@
 
-import Expenses from "./Components/Expenses";
+import Expenses from "./Components/Expenses/Expenses";
 //Remember the simple rule is anythat that start with a lower case letter is a
 // built in  html component when it uppercase it is a custom so alwasy start with uppercase
 function App() {
