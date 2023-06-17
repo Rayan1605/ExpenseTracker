@@ -7,13 +7,14 @@ const ExpenseForm = () => {
     const [enteredTitle,setEnteredTitle] = useState('');
     const TitleChangeHandler = (event) => {
 
-        setEnteredTitle(event.target.value);
+        setEnteredTitle(event.target.value); // for saving user information
+
     }
     return <form>
         <div className="new-expense__controls">
             <div className="new-expense__control">
             <label>Title</label>
-            <input type="text" onChange={TitleChangeHandler}/>
+            <input type="text" onChange={TitleChangeHandler}/>  {/*Adding and onchange so if anything changes then it will run the function */}
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
