@@ -1,6 +1,7 @@
-
+import React from "react";
 import Expenses from "./Components/Expenses/Expenses";
-import NewExpense from "./Components/Expenses/newExpense";
+import NewExpense from "./Components/NewExpense/newExpense";
+
 //Remember the simple rule is anythat that start with a lower case letter is a
 // built in  html component when it uppercase it is a custom so alwasy start with uppercase
 function App() {
@@ -25,9 +26,9 @@ function App() {
             date: new Date(2021, 5, 12),
         },
     ];
-  return ( //so here you can see naming the title in expenses object as title so when we use it again we need to use the same name
+  return (
    <div>
-        <NewExpense/>
+       <NewExpense/>
       <Expenses items={expenses}/>
    </div>
   );
