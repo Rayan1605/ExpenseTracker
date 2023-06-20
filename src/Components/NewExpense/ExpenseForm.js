@@ -30,9 +30,9 @@ const ExpenseForm = () => {
                 date: new Date(enteredDate)
             };
             console.log(expenseData);
-            setEnteredTitle('');
-            setEnteredAmount('');
-            setEnteredDate('');
+            setEnteredTitle(expenseData.title);
+            setEnteredAmount(expenseData.amount);
+            setEnteredDate(expenseData.date);
     }
     return (
         <form  onSubmit={SubmitHandler}>
