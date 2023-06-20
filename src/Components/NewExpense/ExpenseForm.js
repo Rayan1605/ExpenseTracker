@@ -38,7 +38,6 @@ const ExpenseForm = () => {
         // so we are clearing the input fields after the user submits the form
         //that why it equals to an empty string
         //to do this in the jsx we need to add a value attribute to the input tag and enter
-        //the variable
     }
     return (
         <form  onSubmit={SubmitHandler}>
