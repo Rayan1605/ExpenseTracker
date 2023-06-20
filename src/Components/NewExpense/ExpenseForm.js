@@ -20,7 +20,12 @@ const ExpenseForm = () => {
     function DateChanged(event) {
         setEnteredDate(event.target.value); // for saving user information
     }
-    return <form>
+
+    function SubmitHandler(event){
+
+    }
+    return (
+        <form  onSubmit={SubmitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
             <label>Title</label>
@@ -40,6 +45,7 @@ const ExpenseForm = () => {
 </div>
 
     </form>
+    );
 }
 
 export default ExpenseForm;
