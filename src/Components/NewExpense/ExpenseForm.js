@@ -30,9 +30,15 @@ const ExpenseForm = () => {
                 date: new Date(enteredDate)
             };
             console.log(expenseData);
-            setEnteredTitle(expenseData.title);
-            setEnteredAmount(expenseData.amount);
-            setEnteredDate(expenseData.date);
+            setEnteredTitle('');
+            setEnteredAmount('');
+            setEnteredDate(''); //this is called two way binding
+        // two way binding is when you update the state and you also update the value of the input
+        //so here we are updating the state and also updating the value of the input
+        // so we are clearing the input fields after the user submits the form
+        //that why it equals to an empty string
+        //to do this in the jsx we need to add a value attribute to the input tag and enter
+        //the variable
     }
     return (
         <form  onSubmit={SubmitHandler}>
@@ -43,11 +49,11 @@ const ExpenseForm = () => {
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
-                <input type="number" min="0.01" step="0.01" onChange={AmountChange}/>
+                <input type="number"  value={enteredAmount} min="0.01" step="0.01" onChange={AmountChange}/>
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type="date" min="2020-01-01" step="2025-12-31" onChange={DateChanged}/>
+                <input type="date"value={enteredDate} min="2020-01-01" step="2025-12-31" onChange={DateChanged}/>
             </div>
         </div>
 <div className="new-expense__actions">
