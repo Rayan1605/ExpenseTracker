@@ -39,7 +39,7 @@ const ExpenseForm = () => {
         <div className="new-expense__controls">
             <div className="new-expense__control">
             <label>Title</label>
-            <input type="text" onChange={TitleChangeHandler}/>  {/*Adding and onchange so if anything changes then it will run the function */}
+            <input type="text" value = {enteredTitle} onChange={TitleChangeHandler}/>  {/*Adding and onchange so if anything changes then it will run the function */}
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
