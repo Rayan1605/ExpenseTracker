@@ -22,7 +22,17 @@ const ExpenseForm = () => {
     }
 
     function SubmitHandler(event){
-
+   event.preventDefault(); // this will prevent the page from reloading which is the default
+        // behaviour of the form
+            const expenseData = {
+                title: enteredTitle,
+                amount: enteredAmount,
+                date: new Date(enteredDate)
+            };
+            console.log(expenseData);
+            setEnteredTitle('');
+            setEnteredAmount('');
+            setEnteredDate('');
     }
     return (
         <form  onSubmit={SubmitHandler}>
