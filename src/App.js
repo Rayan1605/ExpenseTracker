@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Expenses from "./Components/Expenses/Expenses";
 import NewExpense from "./Components/NewExpense/newExpense";
+import expenses from "./Components/Expenses/Expenses";
 
  const Dummy_Expense = [ //so here we are creating an array of objects
         {
@@ -24,15 +25,15 @@ import NewExpense from "./Components/NewExpense/newExpense";
         },
     ];
 function App() {
-    const [expense, SetExpense] = useState(Dummy_Expense,);
+    const [Dummy_Expense, SetExpense] = useState(Dummy_Expense,);
 
     function addExpenseHandler(expense) {
         //This is the best way to update the state when it depends on the previous state
-      const addExpense = (expense) => {
+
             SetExpense((prevExpense) => {
                 return [expense, ...prevExpense];
             });
-      }
+
         return (
             <div>
                 <NewExpense onAddExpense={addExpenseHandler}/>
