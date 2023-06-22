@@ -26,8 +26,7 @@ import NewExpense from "./Components/NewExpense/newExpense";
 function App() {
    const [expense,SetExpense] = useState(Dummy_Expense, );
     function addExpenseHandler(expense) {
-
-    }
+SetExpense([expense, ...expense]);
   return (
    <div>
        <NewExpense onAddExpense ={addExpenseHandler}/>
