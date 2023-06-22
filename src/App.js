@@ -24,15 +24,22 @@ import NewExpense from "./Components/NewExpense/newExpense";
         },
     ];
 function App() {
-   const [expense,SetExpense] = useState(Dummy_Expense, );
+    const [expense, SetExpense] = useState(Dummy_Expense,);
+
     function addExpenseHandler(expense) {
-SetExpense([expense, ...expense]);
-  return (
-   <div>
-       <NewExpense onAddExpense ={addExpenseHandler}/>
-      <Expenses items={expenses}/>
-   </div>
-  );
+        //This is the best way to update the state when it depends on the previous state
+      const addExpense = (expense) => {
+            SetExpense((prevExpense) => {
+                return [expense, ...prevExpense];
+            });
+      }
+        return (
+            <div>
+                <NewExpense onAddExpense={addExpenseHandler}/>
+                <Expenses items={expenses}/>
+            </div>
+        );
+    }
 }
 
 export default App;
