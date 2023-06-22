@@ -30,8 +30,9 @@ function App() {
     function addExpenseHandler(expense) {
         //This is the best way to update the state when it depends on the previous state
 
-        SetExpense((prevExpense) => {
-            return [expense, ...prevExpense];
+        SetExpense((prevExpense) => { // so it getting the previous state and then adding the
+            // new expense
+            return [expense, ...prevExpense]; // so we are adding the new expense to the array
         });
     }
 
