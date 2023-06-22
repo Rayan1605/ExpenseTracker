@@ -1,7 +1,7 @@
 import ExpenseDate from './ExpenseDate';
 import Card from './Card';
 import './ExpenseItem.css';
-import React,{useState} from 'react';// you need to import useState from react to use it
+import React from 'react';// you need to import useState from react to use it
 //if you want to update the webpage you need to use the useState hook
 
 function ExpenseItem(props) {
