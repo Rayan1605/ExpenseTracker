@@ -1,11 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Expenses from "./Components/Expenses/Expenses";
 import NewExpense from "./Components/NewExpense/newExpense";
 
-//Remember the simple rule is anythat that start with a lower case letter is a
-// built in  html component when it uppercase it is a custom so alwasy start with uppercase
-function App() {
-    const expenses = [ //so here we are creating an array of objects
+ const Dummy_Expense = [ //so here we are creating an array of objects
         {
             id: 'e1',
             title: 'Toilet Paper',
@@ -26,7 +23,8 @@ function App() {
             date: new Date(2021, 5, 12),
         },
     ];
-
+function App() {
+   const [expense,SetExpense] = useState(Dummy_Expense, );
     function addExpenseHandler(expense) {
 
     }
