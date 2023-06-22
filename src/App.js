@@ -30,9 +30,10 @@ function App() {
     function addExpenseHandler(expense) {
         //This is the best way to update the state when it depends on the previous state
 
-            SetExpense((prevExpense) => {
-                return [expense, ...prevExpense];
-            });
+        SetExpense((prevExpense) => {
+            return [expense, ...prevExpense];
+        });
+    }
 
         return (
             <div>
@@ -40,7 +41,7 @@ function App() {
                 <Expenses items={expenses}/>
             </div>
         );
-    }
+
 }
 
 export default App;
