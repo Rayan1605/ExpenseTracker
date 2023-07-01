@@ -12,7 +12,7 @@ function Expenses(props) {
                     // know which element to update or where to place the element
                     title = {expense.title}
                              amount = {expense.amount}
-                             date = {expense.date}/>
+                             date = {expense.date}/> // so here we are passing the data from the parent node to the child node
             ))}
 
         </Card>
